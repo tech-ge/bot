@@ -1,0 +1,25 @@
+id: ig_page_01
+platform: instagram
+type: page
+username: techgeo_official
+auth:
+  method: graph
+  token_env: IG_GRAPH_TOKEN
+  ig_user_id: me
+isolation:
+  profile_id: ig_page_01
+  proxy_id: proxy_us_03
+  fingerprint_file: anti_detection/fingerprint_profiles/ig_page_01.json
+limits:
+  follows_per_day: 30
+  likes_per_day: 200
+  posts_per_day: 3
+  min_gap_seconds: 45
+topics:
+  - product updates
+  - company news
+images:
+  - content/media/images/logo.png
+image_urls: []
+ai_image_prompt: "minimal tech illustration, flat colors, no text, wide banner"
+watermark: "@techgeo_official"

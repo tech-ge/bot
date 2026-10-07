@@ -1,0 +1,30 @@
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  default:
+    format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {name} | {message}"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: default
+
+  file_app:
+    class: logging.handlers.RotatingFileHandler
+    filename: logs/app.log
+    maxBytes: 10485760
+    backupCount: 5
+    formatter: default
+    level: DEBUG
+
+loggers:
+  techgeo:
+    level: INFO
+    handlers: [console, file_app]
+    propagate: false
+
+root:
+  level: INFO
+  handlers: [console]

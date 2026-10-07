@@ -1,0 +1,20 @@
+id: ig_personal_01
+platform: instagram
+type: personal
+username: techgeo_dev
+auth:
+  method: cookie
+  cookie_file: anti_detection/cookies/ig_personal_01.pkl
+isolation:
+  profile_id: ig_personal_01
+  proxy_id: proxy_us_01
+  fingerprint_file: anti_detection/fingerprint_profiles/ig_personal_01.json
+limits:
+  follows_per_day: 20
+  likes_per_day: 150
+  posts_per_day: 2
+  min_gap_seconds: 60
+topics:
+  - software engineering
+  - developer tools
+images: []

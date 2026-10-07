@@ -1,0 +1,21 @@
+id: ig_page_02
+platform: instagram
+type: page
+username: techgeo_news
+auth:
+  method: graph
+  token_env: IG_GRAPH_TOKEN
+  ig_user_id: me
+isolation:
+  profile_id: ig_page_02
+  proxy_id: proxy_us_04
+  fingerprint_file: anti_detection/fingerprint_profiles/ig_page_02.json
+limits:
+  follows_per_day: 30
+  likes_per_day: 200
+  posts_per_day: 5
+  min_gap_seconds: 45
+topics:
+  - tech news
+  - industry analysis
+images: []

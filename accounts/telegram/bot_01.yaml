@@ -1,0 +1,17 @@
+id: tg_bot_01
+platform: telegram
+type: bot
+username: techgeo_bot
+auth:
+  method: bot_token
+  token_env: TG_BOT_TOKEN_01
+isolation:
+  profile_id: tg_bot_01
+  proxy_id: ""
+  fingerprint_file: anti_detection/fingerprint_profiles/tg_bot_01.json
+chat_id: ""
+limits:
+  messages_per_minute: 20
+topics:
+  - general updates
+images: []

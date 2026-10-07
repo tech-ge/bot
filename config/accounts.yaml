@@ -1,0 +1,85 @@
+accounts:
+  - id: ig_personal_01
+    platform: instagram
+    type: personal
+    username: techgeo_dev
+    enabled: true
+    config_file: accounts/instagram/acc_personal_01.yaml
+  - id: ig_personal_02
+    platform: instagram
+    type: personal
+    username: techgeo_lab
+    enabled: true
+    config_file: accounts/instagram/acc_personal_02.yaml
+  - id: ig_page_01
+    platform: instagram
+    type: page
+    username: techgeo_official
+    enabled: true
+    config_file: accounts/instagram/acc_page_01.yaml
+  - id: ig_page_02
+    platform: instagram
+    type: page
+    username: techgeo_news
+    enabled: true
+    config_file: accounts/instagram/acc_page_02.yaml
+  - id: fb_personal_01
+    platform: facebook
+    type: personal
+    username: techgeo.dev
+    enabled: true
+    config_file: accounts/facebook/acc_personal_01.yaml
+  - id: fb_page_01
+    platform: facebook
+    type: page
+    username: TechGeoOfficial
+    enabled: true
+    config_file: accounts/facebook/acc_page_01.yaml
+  - id: fb_page_02
+    platform: facebook
+    type: page
+    username: TechGeoNews
+    enabled: true
+    config_file: accounts/facebook/acc_page_02.yaml
+  - id: snap_personal_01
+    platform: snapchat
+    type: personal
+    username: techgeo_snap
+    enabled: true
+    config_file: accounts/snapchat/acc_personal_01.yaml
+  - id: snap_personal_02
+    platform: snapchat
+    type: personal
+    username: techgeo_snap2
+    enabled: true
+    config_file: accounts/snapchat/acc_personal_02.yaml
+  - id: tw_personal_01
+    platform: twitter
+    type: personal
+    username: techgeo_dev
+    enabled: true
+    config_file: accounts/twitter/acc_personal_01.yaml
+  - id: tw_page_01
+    platform: twitter
+    type: page
+    username: techgeo
+    enabled: true
+    config_file: accounts/twitter/acc_page_01.yaml
+  - id: tw_page_02
+    platform: twitter
+    type: page
+    username: techgeonews
+    enabled: true
+    config_file: accounts/twitter/acc_page_02.yaml
+  - id: tg_bot_01
+    platform: telegram
+    type: bot
+    username: techgeo_bot
+    enabled: true
+    config_file: accounts/telegram/bot_01.yaml
+  - id: tg_bot_02
+    platform: telegram
+    type: bot
+    username: techgeo_news_bot
+    enabled: true
+    config_file: accounts/telegram/bot_02.yaml

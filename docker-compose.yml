@@ -1,0 +1,78 @@
+version: "3.9"
+
+services:
+  techgeo:
+    build: .
+    container_name: techgeo_app
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./:/app
+      - ./logs:/app/logs
+      - ./data:/app/data
+      - ./anti_detection:/app/anti_detection
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    networks:
+      - techgeo_net
+
+  worker:
+    build: .
+    container_name: techgeo_worker
+    restart: unless-stopped
+    env_file: .env
+    command: celery -A workers.celery_app worker --loglevel=INFO
+    volumes:
+      - ./:/app
+      - ./logs:/app/logs
+      - ./data:/app/data
+      - ./anti_detection:/app/anti_detection
+    depends_on:
+      - redis
+      - postgres
+    networks:
+      - techgeo_net
+
+  redis:
+    image: redis:7-alpine
+    container_name: techgeo_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - techgeo_net
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: techgeo_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: techgeo
+      POSTGRES_PASSWORD: techgeo
+      POSTGRES_DB: techgeo
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U techgeo"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - techgeo_net
+
+volumes:
+  pgdata:
+
+networks:
+  techgeo_net:
+    driver: bridge

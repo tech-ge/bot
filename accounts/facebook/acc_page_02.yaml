@@ -1,0 +1,19 @@
+id: fb_page_02
+platform: facebook
+type: page
+username: TechGeoNews
+auth:
+  method: graph
+  token_env: FB_GRAPH_TOKEN
+  page_id_env: FB_PAGE_ID
+isolation:
+  profile_id: fb_page_02
+  proxy_id: proxy_us_07
+  fingerprint_file: anti_detection/fingerprint_profiles/fb_page_02.json
+limits:
+  posts_per_day: 5
+  min_gap_seconds: 120
+topics:
+  - tech news
+  - weekly roundup
+images: []

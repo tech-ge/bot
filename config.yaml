@@ -1,0 +1,68 @@
+app:
+  name: techgeo
+  timezone: UTC
+  max_concurrent_accounts: 10
+
+scheduler:
+  timezone: UTC
+  job_defaults:
+    coalesce: true
+    max_instances: 1
+    misfire_grace_time: 60
+
+rate_limits:
+  default:
+    actions_per_minute: 20
+    actions_per_hour: 300
+    actions_per_day: 1000
+  instagram:
+    follows_per_day: 30
+    likes_per_day: 200
+    posts_per_day: 3
+    min_gap_seconds: 45
+  facebook:
+    posts_per_day: 5
+    min_gap_seconds: 120
+  snapchat:
+    posts_per_day: 5
+    min_gap_seconds: 180
+  twitter:
+    tweets_per_day: 50
+    likes_per_day: 200
+    min_gap_seconds: 30
+  telegram:
+    messages_per_minute: 20
+
+circuit_breaker:
+  warning_threshold: 1
+  pause_minutes: 45
+  max_trips_per_day: 3
+
+anti_detection:
+  humanize: true
+  randomize_order: true
+  paste_not_type: true
+  proxy_rotation: sticky
+  fingerprint_refresh_days: 30
+
+copyright_guard:
+  strict: true
+  reverse_search: false
+  min_similarity_flag: 0.85
+  allowed_licenses:
+    - CC0
+    - PUBLIC_DOMAIN
+    - OWNED
+    - LICENSED
+
+ai:
+  provider: openai
+  model: gpt-4o-mini
+  temperature: 0.9
+  max_tokens: 500
+
+logging:
+  level: INFO
+  format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {name} | {message}"
+  rotation: "10 MB"
+  retention: "14 days"

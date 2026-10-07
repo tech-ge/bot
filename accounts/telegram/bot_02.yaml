@@ -1,0 +1,17 @@
+id: tg_bot_02
+platform: telegram
+type: bot
+username: techgeo_news_bot
+auth:
+  method: bot_token
+  token_env: TG_BOT_TOKEN_02
+isolation:
+  profile_id: tg_bot_02
+  proxy_id: ""
+  fingerprint_file: anti_detection/fingerprint_profiles/tg_bot_02.json
+chat_id: ""
+limits:
+  messages_per_minute: 20
+topics:
+  - tech news
+images: []

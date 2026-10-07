@@ -1,0 +1,22 @@
+id: tw_page_01
+platform: twitter
+type: page
+username: techgeo
+auth:
+  method: oauth
+  api_key_env: TW_API_KEY
+  api_secret_env: TW_API_SECRET
+  access_token_env: TW_ACCESS_TOKEN
+  access_secret_env: TW_ACCESS_SECRET
+isolation:
+  profile_id: tw_page_01
+  proxy_id: proxy_us_11
+  fingerprint_file: anti_detection/fingerprint_profiles/tw_page_01.json
+limits:
+  tweets_per_day: 50
+  likes_per_day: 200
+  min_gap_seconds: 30
+topics:
+  - product updates
+  - tech news
+images: []

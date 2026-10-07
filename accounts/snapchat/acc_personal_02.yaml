@@ -1,0 +1,17 @@
+id: snap_personal_02
+platform: snapchat
+type: personal
+username: techgeo_snap2
+auth:
+  method: cookie
+  cookie_file: anti_detection/cookies/snap_personal_02.pkl
+isolation:
+  profile_id: snap_personal_02
+  proxy_id: proxy_us_09
+  fingerprint_file: anti_detection/fingerprint_profiles/snap_personal_02.json
+limits:
+  posts_per_day: 5
+  min_gap_seconds: 180
+topics:
+  - quick tips
+images: []

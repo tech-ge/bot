@@ -1,0 +1,13 @@
+# Whitelist of approved assets. Any asset not listed here is rejected when
+# copyright_guard.strict = true in config.yaml.
+#
+# License codes: CC0, PUBLIC_DOMAIN, OWNED, LICENSED, CC-BY, CC-BY-SA,
+#                CC-BY-ND, CC-BY-NC, CC-BY-NC-ND, ALL_RIGHTS_RESERVED
+assets: []
+# Example:
+#   - path: content/media/images/logo.png
+#     license: OWNED
+#     source: in-house
+#   - path: content/media/images/hero.jpg
+#     license: CC0
+#     source: https://example.com/hero

@@ -1,0 +1,17 @@
+id: fb_personal_01
+platform: facebook
+type: personal
+username: techgeo.dev
+auth:
+  method: cookie
+  cookie_file: anti_detection/cookies/fb_personal_01.pkl
+isolation:
+  profile_id: fb_personal_01
+  proxy_id: proxy_us_05
+  fingerprint_file: anti_detection/fingerprint_profiles/fb_personal_01.json
+limits:
+  posts_per_day: 3
+  min_gap_seconds: 120
+topics:
+  - personal updates
+images: []

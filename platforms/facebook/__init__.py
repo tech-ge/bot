@@ -1,0 +1,1 @@
+"""Facebook adapter package."""
