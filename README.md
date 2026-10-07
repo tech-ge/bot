@@ -24,3 +24,4 @@ Multi-account social media bot for Instagram, Facebook, Snapchat, Twitter/X, and
 
 ## License
 Proprietary — internal use only.
+# bot
